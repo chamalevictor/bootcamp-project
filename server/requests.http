@@ -1,0 +1,7 @@
+### HOME
+GET http://localhost:5000/
+
+### PRODUCT
+GET http://localhost:5000/productos
+
+
