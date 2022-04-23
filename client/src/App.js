@@ -1,14 +1,16 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import Product from './Components/Product';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './Components/Home';
+import Products from './Components/Products';
+import ContactUs from './Components/ContactUs';
 
-
-const prodTest = {
+export const prodTest = {
   nombre: "Victor",
   edad: 30,
   dpi: 2076941760101
 };
-const prodTest2 = {
+export const prodTest2 = {
   nombre: "Joel",
   edad: 30,
   dpi: 2076941760101
@@ -17,16 +19,21 @@ const prodTest2 = {
 function App() {
 
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <Navbar/>
-      
+      <header className="App-header">      
      <h1>here we are</h1>
-     <Product props={prodTest}/>
-     <Product props={prodTest2}/>
+     <Navbar/>
+     <Routes>
+       <Route path="/" element={<Home />}> Home </Route>
+       <Route path="/products" element={<Products />}> Products </Route>
+       
+     </Routes>
+      
       </header>
       
     </div>
+    </BrowserRouter>
   );
 }
 

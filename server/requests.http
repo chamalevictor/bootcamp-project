@@ -4,4 +4,6 @@ GET http://localhost:5000/
 ### PRODUCT
 GET http://localhost:5000/productos
 
+### PRODUCT
+POST http://localhost:5000/productos
 
