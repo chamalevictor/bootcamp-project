@@ -23,7 +23,7 @@ router.get('/',(req, res, next) => {
             })
         });
     });
-    
+
 router.post('/',(req, res, next) => {
     const product = new Product({
         _id: new mongoose.Types.ObjectId(),
@@ -40,7 +40,7 @@ router.post('/',(req, res, next) => {
     })
     .catch(err => console.log(err));    
     res.status(201).json({
-        message: 'Estamos en productos POST',
+        message: 'Algo mas',
         createdProduct: product
     })
 });

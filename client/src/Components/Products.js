@@ -1,6 +1,7 @@
 import Product from "./Product";
 import {prodTest} from "../App";
 import {prodTest2} from "../App";
+import './clientCSS.css';
 
 function Products(){
     return(
