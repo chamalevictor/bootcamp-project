@@ -6,7 +6,7 @@ const prodTest = {
   
 
 const initialState = {
-    items: [],
+    cartItems: [],
     count: 0,
     nombre: "",
     edad: 0,
@@ -19,7 +19,7 @@ const initialState = {
               
                 return{
                     ...state,
-                    items: state.items+prodTest,
+                    items: state.cartItems.push(prodTest),
                     count: state.count+1
                     
                 };

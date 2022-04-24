@@ -4,14 +4,14 @@ const express = require('express');
 //Excecuting express.
 const app = express();
 
-const bodyParser = require('body-parser');
+///const bodyParser = require('body-parser');
 
 //Importing products routes.
 const productRoutes = require('./api/routes/products');
 
 //Handling cors and parsing body.
 //app.use(cors());
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 //All requests starting with '/products' will be handled by productRoutes.
 app.post('/', (req, res, next) =>{

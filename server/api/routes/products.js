@@ -9,7 +9,7 @@ const router = express.Router();
 const Product = require('../models/products');
 
 //get() is the method that will handle incoming 'GET' requests.
-/*router.get('/',(req, res, next) => {
+router.get('/',(req, res, next) => {
     const product = new Product({
         _id: new mongoose.Types.ObjectId,
         img: req.body.img,
@@ -30,7 +30,7 @@ const Product = require('../models/products');
     });
 });
 
-*/
+
 router.post('/',(req, res, next) => {
     const product = new Product({
         _id: new mongoose.Types.ObjectId,

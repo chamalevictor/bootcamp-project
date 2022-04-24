@@ -1,9 +1,9 @@
-import React from "react";
+import DS1560 from '../img/DS1560.jpg';
 
 function Home(){
     return(
         <div>
-            This is the home page.
+            <img src={DS1560} class="img-fluid" alt="Desk.jpg"/>
         </div>
     );
 };

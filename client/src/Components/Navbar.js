@@ -1,22 +1,20 @@
 
 import React from 'react';
-import {Routes, Route, BrowserRouter, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Home from './Home';
-import Products from './Products';
-import ContactUs from './ContactUs';
-
 
 function Navbar(){
     const count = useSelector(state => state.count);
     return(
-
-            <div>
-
-                <p>Cart</p>
-                <p>Articulos: {count}</p>
-                <button>Ver Carrito</button>
-            </div>
+<nav className="navbar navbar-light bg-light">
+  <div className="container-fluid">
+    <Link className="navbar-brand" to='/'>Home</Link>
+    <Link className="navbar-brand" to='/products'>Productos</Link>
+    <Link className="navbar-brand" to='/contactus'>Contáctenos</Link>
+    <Link to='/Cart'><button className="btn btn-outline-success" type="submit">Carrito {count}</button></Link>
+  </div>
+</nav>
+            
         
     );
 };
